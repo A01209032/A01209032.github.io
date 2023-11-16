@@ -1,312 +1,96 @@
-<!DOCTYPE html> <!-- especificar que es HTML5 -->
+<!DOCTYPE html>
 <html>
+
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    
-<style>
-    * {
-      box-sizing: border-box;
-    }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-    .img-container {
-      float: left;
-      width: 100%;
-      padding: 5px;
-    }
+        h1 {
+            text-align: center;
+            font-family: 'Permanent Marker', cursive;
+            font-size: 3em;
+        }
 
-    .clearfix::after {
-      content: "";
-      clear: both;
-      display: table;
-    }
-    
-    .img-container img {
-        width: 100%;
-    }
-    
-    #container {
-        width: 960px;
-        margin: 25px auto;
-        background-color: #ffffff;
-    }
-    
-    body {
-        background: url(img/bg.png);
-        background-size: cover;
-        background-position: top;
-    }
-    
-    h1 {
-        text-align: center;
-        font-family: 'Permanent Marker', cursive;
-        font-size: 3em;
-    }
-    
-</style>
+
+        .img-container {
+            float: left;
+            width: 100%;
+
+            padding: 5px;
+            overflow: auto;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img-container img {
+            width: 100%;
+            align-self: left;
+        }
+    </style>
 </head>
+
 <body>
-    
+
+    <h1>PREPATEC 2023</h1>
+
+    <div id="container"></div>
 
 
-    <div id="container">
-          <div class="img-container">
-          <img src="img/01/1.jpeg">
-          </div>
-        
-        <div class="img-container">
-          <img src="img/01/2.jpeg">
-          </div>
-        
-        <div class="img-container">
-          <img src="img/01/3.jpeg">
-          </div>
+    <script>
+        loadnew();
 
-          <div class="img-container">
-            <img src="img/01/4.jpeg">
-            </div>
-          
-          <div class="img-container">
-            <img src="img/01/5.jpeg">
-            </div>
-          
-          <div class="img-container">
-            <img src="img/01/6.jpeg">
-            </div>
+        function loadnew() {
 
-            <div class="img-container">
-              <img src="img/01/7.jpeg">
-              </div>
-            
-            <div class="img-container">
-              <img src="img/01/8.jpeg">
-              </div>
-            
-            <div class="img-container">
-              <img src="img/01/9.jpeg">
-              </div>
-    
-              <div class="img-container">
-                <img src="img/01/10.jpeg">
-                </div>
-              
-              <div class="img-container">
-                <img src="img/01/11.jpeg">
-                </div>
-              
-              <div class="img-container">
-                <img src="img/01/12.jpeg">
-                </div>
 
-                <div class="img-container">
-                  <img src="img/01/13.jpeg">
-                  </div>
-        
-                <div class="img-container">
-                  <img src="img/01/14.jpeg">
-                  </div>
-                
-                <div class="img-container">
-                  <img src="img/01/15.jpeg">
-                  </div>
-                
-                <div class="img-container">
-                  <img src="img/01/16.jpeg">
-                  </div>
-
-                <div class="img-container">
-                    <img src="img/02/1.jpg">
-                    </div>
-                
-                <div class="img-container">
-                    <img src="img/02/2.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/3.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/4.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/5.jpg">
-                    </div>
-                
-                <div class="img-container">
-                    <img src="img/02/6.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/7.jpg">
-                    </div>
-                
-                <div class="img-container">
-                    <img src="img/02/8.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/9.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/10.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/11.jpg">
-                    </div>
-
-                <div class="img-container">
-                    <img src="img/02/12.jpg">
-                    </div>
-
-                <div class="img-container">
-                  <img src="img/02/13.jpg">
-                  </div>
-
-                <div class="img-container">
-                  <img src="img/02/14.jpg">
-                  </div>
-                
-                <div class="img-container">
-                  <img src="img/02/15.jpg">
-                  </div>
-                
-                <div class="img-container">
-                  <img src="img/02/16.jpg">
-                  </div>
-        
+            var i;
+            var z;
+            var frames = 4;
 
 
 
+            for (i = 1; i < 81; i++) {
+                for (z = 1; z < frames + 1; z++) {
+                    //document.getElementById("container").innerHTML += '<div  > <img class="img-container" onerror="this.remove()" src="img/0'+z+'/'+i+'.jpg"> </div>';
+                    document.getElementById("container").innerHTML += '<img class="img-container" style="width:100%;" onerror="this.remove()" src="img/' + z + '/' + i + '.png"> ';
+                    //document.getElementById("container").innerHTML += '<div  > <img class="img-container" onerror="this.remove()" src="img/0'+z+'/'+i+'.jpeg"> </div>';
 
+                }
 
-                  <div class="img-container">
-                    <img src="img/03/1.jpg">
-                    </div>
-                    
-                    <div class="img-container">
-                      <img src="img/03/2.jpg">
-                      </div>
+                //window.alert('<div class="img-container"> <img src="img/0'+z+'/'+i+'.PNG"> </div>')
+            }
 
-                  <div class="img-container">
-                    <img src="img/03/3.jpg">
-                    </div>
+        }
 
-                    <div class="img-container">
-                      <img src="img/03/4.jpg">
-                      </div>
-
-                      <div class="img-container">
-                        <img src="img/03/5.jpg">
-                        </div>
-
-                      <div class="img-container">
-                        <img src="img/03/6.jpg">
-                        </div>
-
-                        <div class="img-container">
-                          <img src="img/03/7.jpg">
-                          </div>
-
-                          <div class="img-container">
-                            <img src="img/03/8.jpg">
-                            </div>
-
-                            <div class="img-container">
-                              <img src="img/03/9.jpg">
-                              </div>
-
-                              <div class="img-container">
-                                <img src="img/03/10.jpg">
-                                </div>
-
-                        <div class="img-container">
-                          <img src="img/03/11.jpg">
-                          </div>
-
-                          <div class="img-container">
-                            <img src="img/03/12.jpg">
-                            </div>
-
-
-                            <div class="img-container">
-                              <img src="img/03/13.jpg">
-                              </div>
-                            
-                              <div class="img-container">
-                                <img src="img/03/14.jpg">
-                                </div>
-
-                                <div class="img-container">
-                                  <img src="img/03/15.jpg">
-                                  </div>
-
-
-                                  <div class="img-container">
-                                    <img src="img/03/16.jpg">
-                                    </div>
-
-
-
-
-
-                                        <div class="img-container">
-                                          <img src="img/04/1.jpg">
-                                          </div>
-
-                                        
-
-
-                                  <div class="img-container">
-                                    <img src="img/04/3.jpg">
-                                    </div>
-
-                                    <div class="img-container">
-                                      <img src="img/04/4.jpg">
-                                      </div>
-  
-
-                                      <div class="img-container">
-                                        <img src="img/04/5.jpg">
-                                        </div>
-
-                                        <div class="img-container">
-                                          <img src="img/04/6.jpg">
-                                          </div>
-
-                                          <div class="img-container">
-                                            <img src="img/04/7.jpg">
-                                            </div>
-      
-    
-
-                          
-                        
-
-        <h1>Día de la familia 2023</h1>
-    </div>
-    
-   <script>
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("img-container");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none"; 
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1} 
-  x[slideIndex-1].style.display = "block"; 
-  setTimeout(carousel, 200); 
-}
-
-</script>
-    
-    
+    </script>
 
 </body>
+
+
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("img-container");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 200);
+    }
+
+</script>
+
 </html>
