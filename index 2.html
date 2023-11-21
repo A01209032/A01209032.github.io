@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3em;
+        }
+
+
+        .img-container {
+            float: left;
+            width: 100%;
+
+            padding: 5px;
+            overflow: auto;
+        }
+
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+
+        .img-container img {
+            width: 100%;
+            align-self: left;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="font-family: 'Neue Haas Grotesk'">PrepaTec 2023</h1>
+
+    <div id="container"></div>
+
+
+    <script>
+        loadnew();
+
+        function loadnew() {
+
+
+            var i;
+            var z;
+            var frames = 4;
+
+
+
+            for (i = 1; i < 81; i++) {
+                for (z = 1; z < frames + 1; z++) {
+                    //document.getElementById("container").innerHTML += '<div  > <img class="img-container" onerror="this.remove()" src="img/0'+z+'/'+i+'.jpg"> </div>';
+                    document.getElementById("container").innerHTML += '<img class="img-container" style="width:100%;" onerror="this.remove()" src="img/' + z + '/' + i + '.png"> ';
+                    //document.getElementById("container").innerHTML += '<div  > <img class="img-container" onerror="this.remove()" src="img/0'+z+'/'+i+'.jpeg"> </div>';
+
+                }
+
+                //window.alert('<div class="img-container"> <img src="img/0'+z+'/'+i+'.PNG"> </div>')
+            }
+
+        }
+
+    </script>
+
+</body>
+
+
+<script>
+    var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+        var i;
+        var x = document.getElementsByClassName("img-container");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > x.length) { slideIndex = 1 }
+        x[slideIndex - 1].style.display = "block";
+        setTimeout(carousel, 700);
+    }
+
+</script>
+
+</html>
